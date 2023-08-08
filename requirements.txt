@@ -1,6 +1,6 @@
 cython==0.29
 networkx==2.5
-numpy==1.19.2
+numpy==1.21
 matplotlib===3.3.4
 seaborn==0.11.1
 python-snappy==0.6.1
