@@ -19,6 +19,11 @@ docker exec -it ecord_container bash
 python setup_cy.py build_ext --inplace --force
 ```
 
+```bash
+docker rm -f ecord_container
+docker rmi ecord
+```
+
 # ecord
 
 [![Generic badge](https://img.shields.io/badge/arXiv-2205.14105-<COLOR>.svg)](https://arxiv.org/abs/2205.14105)
