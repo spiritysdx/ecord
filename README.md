@@ -2,7 +2,7 @@
 
 Only CPU version
 
-```
+```bash
 cd /root
 git clone https://github.com/spiritysdx/ecord.git
 cd ecord
@@ -14,7 +14,7 @@ docker build . -t ecord -f Dockerfile
 docker run -itd --rm --name ecord_container -v /root/ecord/:/home/app/ecord ecord
 ```
 
-```
+```bash
 docker exec -it ecord_container bash
 python setup_cy.py build_ext --inplace --force
 ```
@@ -71,7 +71,7 @@ To build the Docker image, start a container, and enter it, run the following fr
 A [training script](experiments/train.py) is provided (which by default trains ECORD on ER40 graphs, but can be simply modified to train/test on different graphs as desired).
 
 ```commandline
->>> python experiments/train.py --save_loc data/training/ --name run1
+python experiments/train.py --save_loc data/training/ --name run1
 ```
 
 *To train the ECO-DQN baseline, an equivilent script ```experiments/train_ecodqn.py``` is provided and can be run in the same way.*
@@ -81,7 +81,7 @@ A [training script](experiments/train.py) is provided (which by default trains E
 The [validation](experiments/validate.py) script can be modifed to rollout checkpoints from training with various customisation.  Full details of the options can be found in the script, but an example of validating the agent trained above is below.
 
 ```commandline
->>> python experiments/validate.py \
+python experiments/validate.py \
        --save_loc data/training/ \
        --name run1 \
        --checkpoint_name solver_best_mean_ER40 \
