@@ -1,3 +1,16 @@
+# Edited
+
+```
+curl -sSL https://get.docker.com/ | sh
+curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-linux-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+docker build . -t ecord -f Dockerfile
+docker run -itd --rm --name ecord_container -v /local/path/to/ecord/:/home/app/ecord ecord
+docker exec -it ecord_container bash
+python setup_cy.py build_ext --inplace --force
+```
+
 # ecord
 
 [![Generic badge](https://img.shields.io/badge/arXiv-2205.14105-<COLOR>.svg)](https://arxiv.org/abs/2205.14105)
