@@ -1,6 +1,10 @@
 # Edited
 
+Only CPU version
+
 ```
+git clone https://github.com/spiritysdx/ecord.git
+cd ecord
 curl -sSL https://get.docker.com/ | sh
 curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-linux-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
