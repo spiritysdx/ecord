@@ -11,6 +11,9 @@ chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 docker build . -t ecord -f Dockerfile
 docker run -itd --rm --name ecord_container -v /local/path/to/ecord/:/home/app/ecord ecord
+```
+
+```
 docker exec -it ecord_container bash
 python setup_cy.py build_ext --inplace --force
 ```
