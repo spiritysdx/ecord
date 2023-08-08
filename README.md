@@ -3,6 +3,7 @@
 Only CPU version
 
 ```
+cd /root
 git clone https://github.com/spiritysdx/ecord.git
 cd ecord
 curl -sSL https://get.docker.com/ | sh
@@ -10,7 +11,7 @@ curl -L "https://github.com/docker/compose/releases/latest/download/docker-compo
 chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 docker build . -t ecord -f Dockerfile
-docker run -itd --rm --name ecord_container -v /local/path/to/ecord/:/home/app/ecord ecord
+docker run -itd --rm --name ecord_container -v /root/ecord/:/home/app/ecord ecord
 ```
 
 ```
